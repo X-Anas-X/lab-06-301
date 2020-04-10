@@ -5,7 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 // Application Setup
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors());
 
@@ -56,7 +56,7 @@ app.get('/weather', (request, response) => {
 });
 function Weather (skyData, i) {
   // this.search_query = city;
-  this.discription = skyData.data[i].weather.discription;
+  this.description = skyData.data[i].weather.description;
   this.date = skyData.data[i].valid_date;
 }
 
